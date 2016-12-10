@@ -31,7 +31,7 @@ while ($movie = $results->fetch_assoc()){
         <td>".$movie['type']."</td>
         <td>".convertDuration($movie['duration'])."</td>
         <td><a class=\"btn btn-info\" href=\"/movies/edit.php?id=".$movie['id']."\">Edit</a></td>
-        <td><button type=\"button\"  class=\"btn btn-danger\">Delete</button></td>
+        <td><a class=\"btn btn-danger\" href=\"/movies/delete.php?id=".$movie['id']."\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>
     </tr>";
 }
 ?>
